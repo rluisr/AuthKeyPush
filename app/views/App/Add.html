@@ -1,11 +1,19 @@
-{{set . "title" "Home"}}
+{{set . "title" "AuthKeyPush"}}
 {{template "header.html" .}}
 
-<div>
-    name:<span>{{ .name }}</span><br/>
-    key:<span>{{ .key }}</span>
+<div class="container center-block">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <h2>Deployed Public Key</h2>
+        <hr>
+        <p>name: {{.name}}</p>
+        <p>key: {{.key}}</p>
+        <br>
+        <a href="/">
+            <button class="btn btn-primary">Back</button>
+        </a>
+    </div>
+    <div class="col-sm-2"></div>
 </div>
-
-<a href="/">back</a>
 
 {{template "footer.html" .}}
