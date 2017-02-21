@@ -2,5 +2,5 @@ test-results/
 tmp/
 routes/
 files/*
-!files/
+!files/putpublickeyhere
 conf/ssh.json
