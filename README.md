@@ -16,8 +16,7 @@ $ go get github.com/revel/cmd/revel
 ### Deploy
 ```
 $ cd $GOPATH/src
-$ git clone git@github.com:rluisr/AuthKeyPush.git
-$ revel run AuthKeyPush
+$ revel new git@github.com:rluisr/AuthKeyPush
 ```
 
 ### First setting
@@ -41,4 +40,6 @@ example:
 ```
 
 ### Second setting
-Put secret key.
+Put secret key `/path/to/secret_key`.
+
+## Run
