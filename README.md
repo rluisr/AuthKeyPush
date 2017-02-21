@@ -1,5 +1,10 @@
 ## AuthKeyPush
-Deploy public key to bastion server of ssh.
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![Code Climate](https://codeclimate.com/github/rluisr/AuthKeyPush/badges/gpa.svg)](https://codeclimate.com/github/rluisr/AuthKeyPush)  
+
+Deploy public key to bastion server of ssh.  
+- Go 1.8
+- revel
 
 ## Overview
 1. Access `http://localhost:9000`
@@ -15,7 +20,7 @@ $ go get github.com/revel/cmd/revel
 ```
 ### Deploy
 ```
-$ cd $GOPATH/src
+$ cd $GOPATH
 $ revel new git@github.com:rluisr/AuthKeyPush
 ```
 
