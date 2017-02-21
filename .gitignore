@@ -2,4 +2,5 @@ test-results/
 tmp/
 routes/
 files/*
+!files/
 conf/ssh.json
