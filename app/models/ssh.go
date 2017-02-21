@@ -17,7 +17,7 @@ type Config struct {
 }
 
 func ReadConfig() ([]Config) {
-	buf, err := ioutil.ReadFile("C:/Go/Projects/src/AuthKeyPush/conf/ssh.json")
+	buf, err := ioutil.ReadFile("./conf/ssh.json")
 	if err != nil {
 		panic(err)
 	}
