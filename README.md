@@ -21,7 +21,6 @@ $ revel new git@github.com:rluisr/AuthKeyPush
 
 ### First setting
 **conf/ssh.json**  
-example:
 ```
 [
   {
@@ -43,3 +42,4 @@ example:
 Put secret key `/path/to/secret_key`.
 
 ## Run
+`revel run git@github.com:rluisr/AuthKeyPush`
