@@ -11,7 +11,10 @@ Deploy public key to bastion server of ssh.
 2. Put name and public key.
 3. Submit
 
-## Install
+### Screen shot
+![top](./public/img/top.png)
+
+## Installation
 ### Install revel
 ```
 $ go get github.com/revel/revel
