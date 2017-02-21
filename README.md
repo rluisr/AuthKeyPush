@@ -25,7 +25,7 @@ $ revel new git@github.com:rluisr/AuthKeyPush
 ```
 
 ### First setting
-**conf/ssh.json**  
+Setting information for bastion server of ssh. -> **conf/ssh.json**
 ```
 [
   {
