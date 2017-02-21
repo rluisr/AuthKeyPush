@@ -1,0 +1,37 @@
+{{set . "overview" "Admin page"}}
+{{template "header.html" .}}
+
+<div class="container">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <h2>SSH Server</h2>
+        <br>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover ">
+                <thead>
+                <tr>
+                    <th>HOST</th>
+                    <th>USER</th>
+                    <th>PORT</th>
+                    <th>Password</th>
+                    <th>KEY_PATH</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{range $c := .ssh}}
+                <tr>
+                    <td>{{$c.Host}}</td>
+                    <td>{{$c.User}}</td>
+                    <td>{{$c.Port}}</td>
+                    <td>{{$c.Password}}</td>
+                    <td>{{$c.Key}}</td>
+                </tr>
+                {{end}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+{{template "footer.html" .}}

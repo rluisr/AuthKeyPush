@@ -1,0 +1,11 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<div>
+    name:<span>{{ .name }}</span><br/>
+    key:<span>{{ .key }}</span>
+</div>
+
+<a href="/">back</a>
+
+{{template "footer.html" .}}
