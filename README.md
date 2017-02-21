@@ -12,7 +12,11 @@ Deploy public key to bastion server of ssh.
 3. Submit
 
 ### Screen shot
+#### Top
 ![top](./public/img/top.png)
+
+#### Result
+![result](./public/img/result.png)
 
 ## Installation
 ### Install revel
