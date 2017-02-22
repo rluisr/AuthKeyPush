@@ -49,4 +49,7 @@ Setting information for bastion server of ssh. -> **conf/ssh.json**
 Put secret key `/path/to/secret_key`.
 
 ## Run
-`revel run AuthKeyPush`
+```
+$ cd $GOPATH/src/AuthKeyPush <- IMPORTANT
+$ revel run AuthKeyPush
+```
