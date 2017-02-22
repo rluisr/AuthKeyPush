@@ -11,13 +11,22 @@ type App struct {
 
 // Top page
 func (c App) Index() revel.Result {
-	return c.Render()
+	s := models.ReadSiteConfig()
+	title := s.Title
+	overview := s.TopOverview
+
+	return c.Render(title, overview)
 }
 
 // Admin page
 func (c App) Admin() revel.Result {
+	site := models.ReadSiteConfig()
 	ssh := models.ReadSSHConfig()
-	return c.Render(ssh)
+
+	title := site.Title
+	overview := site.AdminOverview
+
+	return c.Render(title, overview, ssh, site)
 }
 
 // Register new Authorized_keys
