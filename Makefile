@@ -1,7 +1,6 @@
 install:
-        @go get github.com/Masterminds/glide
-        @go install github.com/Masterminds/glide
-        @glide install
+        @go install github.com/revel/revel
+        @go install github.com/revel/cmd/revel
 
 server:
-        @revel run github.com/rluisr/AuthKeyPush
+        @revel run AuthKeyPush
