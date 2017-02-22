@@ -5,3 +5,4 @@ routes/
 files/*
 !files/putpublickeyhere
 conf/ssh.json
+log/
