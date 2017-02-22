@@ -19,16 +19,11 @@ Deploy public key to bastion server of ssh.
 ![result](./public/img/result.png)
 
 ## Installation
-### Install revel
 ```
-$ go get github.com/revel/revel
-$ go get github.com/revel/cmd/revel
-
-```
-### Deploy
-```
-$ cd $GOPATH
-$ revel new git@github.com:rluisr/AuthKeyPush
+$ cd $GOPATH/src
+$ git clone git@github.com:rluisr/AuthKeyPush.git
+$ cd AuthKeyPush
+$ make install
 ```
 
 ### First setting
@@ -54,4 +49,7 @@ Setting information for bastion server of ssh. -> **conf/ssh.json**
 Put secret key `/path/to/secret_key`.
 
 ## Run
-`revel run git@github.com:rluisr/AuthKeyPush`
+```
+$ cd $GOPATH/src/AuthKeyPush <- IMPORTANT
+$ revel run AuthKeyPush
+```
