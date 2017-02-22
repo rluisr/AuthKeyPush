@@ -1,0 +1,9 @@
+package: AuthKeyPush
+import:
+- package: github.com/revel/revel
+  version: ^0.13.1
+  subpackages:
+  - testing
+- package: golang.org/x/crypto
+  subpackages:
+  - ssh
