@@ -5,3 +5,6 @@ routes/
 files/*
 !files/putpublickeyhere
 conf/ssh.json
+glide.lock
+vendor/
+log/
