@@ -5,7 +5,6 @@ import (
 	"golang.org/x/crypto/ssh"
 	"io/ioutil"
 	"encoding/json"
-	_"fmt"
 )
 
 type Config struct {

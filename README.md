@@ -3,8 +3,7 @@
 [![Code Climate](https://codeclimate.com/github/rluisr/AuthKeyPush/badges/gpa.svg)](https://codeclimate.com/github/rluisr/AuthKeyPush)  
 
 Deploy public key to bastion server of ssh.  
-- Go 1.8
-- revel
+- Go 1.7 => better
 
 ## Overview
 1. Access `http://localhost:9000`
@@ -53,3 +52,33 @@ Put secret key `/path/to/secret_key`.
 $ cd $GOPATH/src/AuthKeyPush <- IMPORTANT
 $ revel run AuthKeyPush
 ```
+
+### Change site message
+check conf/site.json
+
+### Enable Authentication
+Only support GitHub authentication. I'll support original authentication.  
+-> conf/site.json
+```
+{
+  "title": "AuthKeyPush",
+  "top-overview": "Deploy your public key of ssh",
+  "auth-overview": "Login Page",
+  "admin-overview": "Admin Page",
+  "auth-github-login": 1,
+  "github-client-id": "<clientid>",
+  "github-client-secret": "<client secret>",
+  "github-redirect-url": "<host>/auth/github",
+  "github-allow-organization": "<Organization>"
+}
+```
+
+#### GitHub
+You must create OAuth application as organization is.  
+<br>
+**auth-github-login**  
+`0`: Disable  
+`1`: Enable
+
+**github-allow-organization**  
+allow organization
