@@ -1,5 +1,16 @@
 {
   "title": "AuthKeyPush",
   "top-overview": "Deploy your public key of ssh",
-  "admin-overview": "Admin Page"
+  "auth-overview": "Login Page",
+  "admin-overview": "Admin Page",
+  "//": "-----------------------------------------------",
+  "//": "Enable Sign in with GitHub",
+  "//": "This section must required.",
+  "//": "Create OAuth application as the organization is.",
+  "auth-github-login": 0,
+  "github-client-id": "",
+  "github-client-secret": "",
+  "github-redirect-url": "",
+  "github-allow-organization": "",
+  "//": "-----------------------------------------------"
 }

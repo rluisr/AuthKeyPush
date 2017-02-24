@@ -11,11 +11,23 @@ type App struct {
 
 // Top page
 func (c App) Index() revel.Result {
-	s := models.ReadSiteConfig()
-	title := s.Title
-	overview := s.TopOverview
+	site := models.ReadSiteConfig()
+	title := site.Title
 
-	return c.Render(title, overview)
+	// Check setting -> auth
+	if site.AuthGithub == 1 && c.Session["login"] != "true" {
+		// If session is false, show login page
+		overview := site.AuthOverview
+		url := models.GetGithubAuthUrl()
+		msg := c.Session["msg"]
+		login := 0
+
+		return c.Render(title, overview, url, login, msg)
+	}
+
+	overview := site.TopOverview
+	login := 1
+	return c.Render(title, overview, login)
 }
 
 // Admin page
@@ -26,11 +38,21 @@ func (c App) Admin() revel.Result {
 	title := site.Title
 	overview := site.AdminOverview
 
+	if site.AuthGithub == 1 && c.Session["login"] != "true" {
+		return c.Redirect("/")
+	}
+
 	return c.Render(title, overview, ssh, site)
 }
 
 // Register new Authorized_keys
 func (c App) Add(name, key string) revel.Result {
+	site := models.ReadSiteConfig()
+
+	if site.AuthGithub == 1 && c.Session["login"] != "true" {
+		return c.Redirect("/")
+	}
+
 	models.ExecSSH(name, key)
 	return c.Render(name, key)
 }

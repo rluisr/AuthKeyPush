@@ -5,6 +5,7 @@
 module:testrunner
 
 GET     /                                       App.Index
+GET     /auth/github                            Auth.Github
 GET     /admin                                  App.Admin
 POST    /add                                    App.Add
 
