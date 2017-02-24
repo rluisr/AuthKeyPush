@@ -73,12 +73,12 @@ Only support GitHub authentication. I'll support original authentication.
 }
 ```
 
-#### GitHub
+### GitHub
 You must create OAuth application as organization is.  
 <br>
-**auth-github-login**  
+**`auth-github-login`**  
 `0`: Disable  
 `1`: Enable
 
-**github-allow-organization**  
-allow organization
+**`github-allow-organization`**  
+allow organization name
