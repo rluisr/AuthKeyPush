@@ -1,5 +1,6 @@
 {{template "header.html" .}}
 
+{{if eq .login 1}}
 <div class="container center-block">
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
@@ -18,6 +19,19 @@
     </div>
     <div class="col-sm-2"></div>
 </div>
+
+{{else}}
+
+<div class="container center-block">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 text-center">
+        <p>{{.msg}}</p>
+        <a href="{{.url}}" class="btn btn-default">Sign with GitHub</a>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+{{end}}
+
 <div class="container">
     <div class="row">
         <div class="span6">
